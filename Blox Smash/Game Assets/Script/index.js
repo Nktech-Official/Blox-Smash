@@ -773,7 +773,7 @@ document.getElementById("gameCanvas").addEventListener("touchstart", function(e)
     document.getElementById("gameCanvas").addEventListener('touchmove', function(e) {
         XDiff = TouchX - MoveX;
         YDiff = TouchY - MoveY;
-        if (Math.abs(e.touches[0].clientX - MoveX) > 1) {
+        if (Math.abs(e.touches[0].clientX - MoveX) >4 ||Math.abs(e.touches[0].clientY - MoveY) > 4) {
             if (Math.abs(XDiff) > Math.abs(YDiff)) {
 
                 if (TouchX < e.touches[0].clientX) {
