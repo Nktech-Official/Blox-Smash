@@ -6,7 +6,7 @@ This is my first Game developed with HTML5 canvas. you can say this is just a te
 https://blox-smash.web.app
 https://blox-smash.firebaseapp.com/
 
-#Features
+# Features
 
 1. Responsive design specially for Mobile devise 
 2. Can be played on a slow internet connection 
@@ -15,7 +15,7 @@ https://blox-smash.firebaseapp.com/
 5. Easy to understand controls both for Dekstop and touch devices.
 6. Show preview 
 
-#TO-DO 
+# TO-DO 
 1. Show a high Score in the  UI. 
 2. Adding More Themes and Music. 
 3. Adding Share High Score button. 
