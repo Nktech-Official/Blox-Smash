@@ -2,9 +2,10 @@
 
 This a web game or you can say a browser game made with JavaScript and HTML5 canvas.
 This is a basic Tetris game. The game in which block's fall from the top and you have to arrange them in a way Such that you form a horizontal line, so it gets cleared 
-This is my first Game developed with HTML5 canvas. you can say this is just a test project and you can play it either of the two URLs:
-https://blox-smash.web.app
-https://blox-smash.firebaseapp.com/
+This is my first Game developed with HTML5 canvas. you can say this is just a test project and you can play it on  either of the two URLs:
+
+1. https://blox-smash.web.app
+2. https://blox-smash.firebaseapp.com/
 
 # Features
 
