@@ -10,7 +10,7 @@
             "type": "image/png"
         },
         {
-            "src": "./Game Assets/img/icons/icon-20x20.png",
+            "src": "./Game Assets/img/icons/Icon-20x20.png",
             "sizes": "20x20",
             "type": "image/png"
         },
@@ -55,7 +55,7 @@
             "type": "image/png"
         },
         {
-            "src": "./Game Assets/img/icons/icon-57x57.png",
+            "src": "./Game Assets/img/icons/Icon-57x57.png",
             "sizes": "57x57",
             "type": "image/png"
         },
@@ -65,7 +65,7 @@
             "type": "image/png"
         },
         {
-            "src": "./Game Assets/img/icons/icon-60x60.png",
+            "src": "./Game Assets/img/icons/Icon-60x60.png",
             "sizes": "60x60",
             "type": "image/png"
         },
@@ -80,7 +80,7 @@
             "type": "image/png"
         },
         {
-            "src": "./Game Assets/img/icons/icon-76x76.png",
+            "src": "./Game Assets/img/icons/Icon-76x76.png",
             "sizes": "76x76",
             "type": "image/png"
         },
@@ -125,12 +125,12 @@
             "type": "image/png"
         },
         {
-            "src": "./Game Assets/img/icons/icon-144x144.png",
+            "src": "./Game Assets/img/icons/Icon-144x144.png",
             "sizes": "144x144",
             "type": "image/png"
         },
         {
-            "src": "./Game Assets/img/icons/icon-152x152.png",
+            "src": "./Game Assets/img/icons/Icon-152x152.png",
             "sizes": "152x152",
             "type": "image/png"
         },
