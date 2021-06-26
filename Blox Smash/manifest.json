@@ -5,7 +5,7 @@
     "start_url": "./index.html",
     "icons": [
         {
-            "src": "./Game Assets/img/icons/icon-16X16.png",
+            "src": "./Game Assets/img/icons/icon-16x16.png",
             "sizes": "16x16",
             "type": "image/png"
         },
