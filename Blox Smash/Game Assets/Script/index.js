@@ -535,7 +535,7 @@ function update() {
 
 }
 var RotateSound = new sound("../../Game Assets/music/RotateSound.wav", false)
-var MoveDown = new sound("../../Game Assets/music/MoveDown.wav", false)
+// var MoveDown = new sound("../../Game Assets/music/MoveDown.wav", false)
 var MoveSound = new sound("../../Game Assets/music/MoveSound.wav", false)
 var GameOverSound = new sound("../../Game Assets/music/Game Over Sound.wav", false)
 var ThemeSong = new sound("../../Game Assets/music/Tetris_theme.ogg", true);
