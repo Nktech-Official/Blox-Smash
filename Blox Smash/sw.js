@@ -1,5 +1,5 @@
-const Static = "site-static-v1.0.8";
-const Dynamic = "site-dynamic-v1.0.3"
+const Static = "site-static-v1.0.9";
+const Dynamic = "site-dynamic-v1.0.4"
 const assets = [
     "./",
     "./index.html",
