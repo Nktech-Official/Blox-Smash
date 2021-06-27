@@ -32,7 +32,7 @@ self.addEventListener("install", evt => {
     evt.waitUntil(
         caches.open(Static).then(cache => {
             //    console.log(cache);
-            cache.addAll(assets).then(() => { console.log("caching") })
+            cache.addAll(assets)
 
         })
     );
