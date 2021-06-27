@@ -373,7 +373,7 @@ function Piece(Tetromino, color) {
                 this.draw();
                 // ctx.shadowOffsetY -= SQ
             } else {
-                if (GAMESNACKS.isAudioEnabled() && SoundOn) {
+                if (SoundOn) {
                     CollideSound.play();
                 }
                 this.lockPiece();
@@ -388,7 +388,7 @@ function Piece(Tetromino, color) {
         // Piece.prototype.moveRight 
     this.moveRight = function() {
         if (!this.collide(1, 0, this.activeTetromino)) {
-            if (GAMESNACKS.isAudioEnabled() && SoundOn) {
+            if (SoundOn) {
                 MoveSound.play();
 
             }
@@ -400,7 +400,7 @@ function Piece(Tetromino, color) {
 
     // Piece.prototype.moveLeft
     this.moveLeft = function() {
-            if (GAMESNACKS.isAudioEnabled() && SoundOn) {
+            if (SoundOn) {
                 MoveSound.play();
             }
             if (!this.collide(-1, 0, this.activeTetromino)) {
@@ -413,7 +413,7 @@ function Piece(Tetromino, color) {
     this.rotate = function() {
         let nextPat = this.tetromino[(this.tetrominoN + 1) % this.tetromino.length];
         let kick = 0;
-        if (GAMESNACKS.isAudioEnabled() && SoundOn) {
+        if (SoundOn) {
             RotateSound.play();
         }
         if (this.collide(0, 0, nextPat)) {
@@ -483,7 +483,7 @@ function Piece(Tetromino, color) {
             }
             if (isRowFull) {
                 // ThemeSong.stop();
-                if (GAMESNACKS.isAudioEnabled() && SoundOn) {
+                if (SoundOn) {
                     LineClearSound.play();
                 }
                 // ThemeSong.play();
@@ -513,8 +513,8 @@ function Piece(Tetromino, color) {
 
         Score += DeltaScore
         ClearLine += LineClear;
-        GAMESNACKS.sendScore(Score)
-        console.log("Socre", Score, "Line: ", LineClear, "TClear: ", ClearLine)
+
+        //console.log("Socre", Score, "Line: ", LineClear, "TClear: ", ClearLine)
         update();
     }
     this.shadow = function() {
@@ -535,7 +535,7 @@ function update() {
 
 }
 var RotateSound = new sound("../../Game Assets/music/RotateSound.wav", false)
-// var MoveDown = new sound("../../Game Assets/music/MoveDown.wav", false)
+    // var MoveDown = new sound("../../Game Assets/music/MoveDown.wav", false)
 var MoveSound = new sound("../../Game Assets/music/MoveSound.wav", false)
 var GameOverSound = new sound("../../Game Assets/music/Game Over Sound.wav", false)
 var ThemeSong = new sound("../../Game Assets/music/Tetris_theme.ogg", true);
@@ -596,7 +596,7 @@ function StartGame() {
     GamePaused = false;
     ClearLine = 0;
     start = true;
-    if (GAMESNACKS.isAudioEnabled() && MusicOn) {
+    if (MusicOn) {
         ThemeSong.play();
     }
 
@@ -626,7 +626,7 @@ function drop() {
                 requestAnimationFrame(drop)
             }
         } else {
-            if (GAMESNACKS.isAudioEnabled() && MusicOn) {
+            if (MusicOn) {
 
                 GameOverSound.play();
             }
@@ -649,7 +649,7 @@ function drop() {
             document.getElementById("resume").style.display = "none";
             document.getElementById("GameArea").style.display = "none";
             ThemeSong.stop();
-            GAMESNACKS.gameOver()
+
 
             // menuShowHide();
 
@@ -667,7 +667,7 @@ function drop() {
             speed += 10 * Level;
         }
         Score += 10 * Level;
-        GAMESNACKS.levelComplete(Level - 1);
+
 
 
     }
@@ -746,7 +746,7 @@ function CONTROL(event) {
 
                     event.preventDefault();
                     Score++;
-                    GAMESNACKS.sendScore(Score)
+
                     p.moveDown();
                 }
             }
@@ -773,7 +773,7 @@ document.getElementById("gameCanvas").addEventListener("touchstart", function(e)
     document.getElementById("gameCanvas").addEventListener('touchmove', function(e) {
         XDiff = TouchX - MoveX;
         YDiff = TouchY - MoveY;
-        if (Math.abs(e.touches[0].clientX - MoveX) >4 ||Math.abs(e.touches[0].clientY - MoveY) > 4) {
+        if (Math.abs(e.touches[0].clientX - MoveX) > 4 || Math.abs(e.touches[0].clientY - MoveY) > 4) {
             if (Math.abs(XDiff) > Math.abs(YDiff)) {
 
                 if (TouchX < e.touches[0].clientX) {
@@ -790,7 +790,7 @@ document.getElementById("gameCanvas").addEventListener("touchstart", function(e)
                     //Down Swipe;
 
                     Score++;
-                    GAMESNACKS.sendScore(Score)
+
                     p.moveDown();
                 }
             }
@@ -881,9 +881,11 @@ function togglePause() {
             // document.getElementById("icon").className = "play";
 
             // async function demo() {
-            if (GAMESNACKS.isAudioEnabled()) {
+            if (MusicOn) {
+
                 ThemeSong.stop();
             }
+
             // await sleep(10000);
             // console.log('Two seconds later, showing sleep in a loop...');
             document.getElementById("iconL").innerHTML = "Resume";
@@ -897,7 +899,7 @@ function togglePause() {
             // }
         } else {
             GamePaused = false;
-            if (GAMESNACKS.isAudioEnabled() && MusicOn) {
+            if (MusicOn) {
                 ThemeSong.play();
             }
             // document.getElementById("icon").className = "pause";
@@ -912,7 +914,7 @@ function togglePause() {
 }
 
 function newGame() {
-    GAMESNACKS.gameOver();
+
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     ThemeSong.stop();
     drawBoard("empty")
@@ -948,19 +950,9 @@ function sound(src, loop) {
         this.sound.pause();
     }
 }
-GAMESNACKS.subscribeToAudioUpdates((isAudioEnabled) => {
-    if (isAudioEnabled && MusicOn) {
-        if (!gameOver) {
-            ThemeSong.play()
-        }
-    } else {
-        ThemeSong.stop();
-    }
-});
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+
+
 document.addEventListener("visibilitychange", function() {
     if (document.hidden) {
         if (!GamePaused && start) {

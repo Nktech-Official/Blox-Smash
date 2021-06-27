@@ -13,6 +13,7 @@
             "src": "./Game Assets/img/icons/Icon-20x20.png",
             "sizes": "20x20",
             "type": "image/png"
+            
         },
         {
             "src": "./Game Assets/img/icons/icon-24x24.png",
@@ -169,6 +170,42 @@
             "src": "./Game Assets/img/icons/icon-1024x1024.png",
             "sizes": "1024x1024",
             "type": "image/png"
+        },
+        {
+            "src": "./Game Assets/img/icons/maskable/icon-48x48.png",
+            "sizes": "48x48",
+            "type": "image/png",
+            "purpose":"maskable"
+        },
+        {
+            "src": "./Game Assets/img/icons/maskable/icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png",
+            "purpose":"maskable"
+        },
+        {
+            "src": "./Game Assets/img/icons/maskable/icon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose":"maskable"
+        },
+        {
+            "src": "./Game Assets/img/icons/maskable/icon-128x128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose":"maskable"
+        },
+        {
+            "src": "./Game Assets/img/icons/maskable/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose":"maskable"
+        },
+        {
+            "src": "./Game Assets/img/icons/maskable/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose":"maskable"
         }
     ],
     "theme_color": "#261196",

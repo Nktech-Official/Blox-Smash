@@ -134,7 +134,8 @@ label {
 #lv,
 #play-pause,
 #iconL,
-#menu {
+#menu,
+#message {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -147,12 +148,12 @@ label {
     /* background-color: rgba(98, 231, 225, 0.753); */
     /* background-color: red; */
     /* background: radial-gradient(circle, rgba(239, 0, 255, 1) 2%, rgba(2, 0, 36, 1) 57%, rgba(45, 45, 174, 1) 75%); */
-    margin: 20px;
+    /* margin: 20px; */
     background: linear-gradient(90deg, rgba(68, 68, 237, 0.733) 23%, rgba(167, 9, 167, 0.7) 80%);
     position: absolute;
     /* justify-content: center; */
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 400px;
     flex-direction: column;
 }
@@ -306,7 +307,8 @@ label {
     #NEXT {
         margin-top: 15px;
     }
-    #menu {
+    #menu,
+    #message {
         /* width: 230px; */
         height: 420px;
     }
@@ -332,7 +334,8 @@ label {
         margin-top: 22px;
         font-size: 30px;
     }
-    #menu {
+    #menu,
+    #message {
         /* width: 270px; */
         height: 420px;
     }
@@ -354,7 +357,8 @@ label {
         margin-top: 22px;
         font-size: 25px;
     }
-    #menu {
+    #menu,
+    #message {
         /* width: 320px; */
         height: 480px;
     }
@@ -385,7 +389,8 @@ label {
     #NEXT {
         margin-top: 22px;
     }
-    #menu {
+    #menu,
+    #message {
         /* width: 390px; */
         height: 500px;
     }
@@ -416,7 +421,8 @@ label {
     #NEXT {
         margin-top: 30px;
     }
-    #menu {
+    #menu,
+    #message {
         /* width: 480px; */
         height: 580px;
     }
@@ -444,7 +450,8 @@ label {
     #NEXT {
         margin-top: 33px;
     }
-    #menu {
+    #menu,
+    #message {
         /* width: 500px; */
         height: 650px;
     }
@@ -459,7 +466,8 @@ label {
         width: 380px;
         height: 760px;
     }
-    #menu {
+    #menu,
+    #message {
         width: 630px;
         height: 760px;
     }
@@ -487,7 +495,8 @@ label {
         width: 475px;
         height: 950px;
     }
-    #menu {
+    #menu,
+    #message {
         /* width: 725px; */
         height: 950px;
     }

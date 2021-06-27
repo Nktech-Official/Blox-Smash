@@ -13,7 +13,11 @@ BgImage.addEventListener("load", () => {
         document.getElementById("loading").className = "fadeOut"
         await sleep(2000)
         document.getElementById("loading").style.display = "none"
-        GAMESNACKS.gameReady()
+
     }
     loading();
 })
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
