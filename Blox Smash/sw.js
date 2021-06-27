@@ -62,8 +62,9 @@ self.addEventListener("fetch", evt => {
                     if (evt.request.url.indexOf(".js") == -1) {
                         cache.put(evt.request.url, fetchRes.clone());
                         limitCacheSize(Dynamic, 10)
-                        return fetchRes;
+
                     }
+                    return fetchRes;
                 })
             });
         }).catch(() => {
