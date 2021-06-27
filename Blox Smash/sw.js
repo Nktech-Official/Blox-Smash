@@ -59,9 +59,11 @@ self.addEventListener("fetch", evt => {
         caches.match(evt.request).then(cacheRes => {
             return cacheRes || fetch(evt.request).then(fetchRes => {
                 return caches.open(Dynamic).then(cache => {
-                    cache.put(evt.request.url, fetchRes.clone());
-                    limitCacheSize(Dynamic, 10)
-                    return fetchRes;
+                    if (evt.request.url.indexOf(".js") == -1) {
+                        cache.put(evt.request.url, fetchRes.clone());
+                        limitCacheSize(Dynamic, 10)
+                        return fetchRes;
+                    }
                 })
             });
         }).catch(() => {
