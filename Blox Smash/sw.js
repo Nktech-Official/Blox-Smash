@@ -1,5 +1,5 @@
 const Static = "site-static-v1.0.6";
-const Dynamic = "site-dynamic-v1.0.4"
+const Dynamic = "site-dynamic-v1.0.3"
 const assets = [
     "./",
     "./index.html",
@@ -32,7 +32,7 @@ self.addEventListener("install", evt => {
     evt.waitUntil(
         caches.open(Static).then(cache => {
             //    console.log(cache);
-            cache.addAll(assets)
+            cache.addAll(assets).then(() => { console.log("caching") })
 
         })
     );
