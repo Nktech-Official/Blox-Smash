@@ -78,7 +78,7 @@ const limitCacheSize = (name, size) => {
     caches.open(name).then(cache => {
         cache.keys().then(keys => {
             if (keys.length > size) {
-                cache.delete(kesy[-1]).then(limitCacheSize(name, size))
+                cache.delete(keys[-1]).then(limitCacheSize(name, size))
             }
         })
     })
