@@ -1,4 +1,4 @@
-const Static = "site-static-v1.0.6";
+const Static = "site-static-v1.0.7";
 const Dynamic = "site-dynamic-v1.0.3"
 const assets = [
     "./",
@@ -8,6 +8,7 @@ const assets = [
     "./Game Assets/Style/style.css",
     "./Game Assets/Script/index.js",
     "./Game Assets/Script/bgcanvas.js",
+    "./Game Assets/Script/app.js",
     "./Game Assets/img/Blox-Smash.png",
     "./Game Assets/img/loading.gif",
     "./Game Assets/img/game-background.jpg",
