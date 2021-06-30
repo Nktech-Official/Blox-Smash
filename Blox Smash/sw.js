@@ -18,12 +18,6 @@ const assets = [
     "./Game Assets/img/appIcon.png",
     "./Game Assets/img/offline.png",
     "./Game Assets/img/Sound.png",
-    "./Game Assets/music/CollideSound.wav",
-    "./Game Assets/music/Game Over Sound.wav",
-    "./Game Assets/music/Line Clear.wav",
-    "./Game Assets/music/MoveSound.wav",
-    "./Game Assets/music/Tetris_theme.ogg",
-    "./Game Assets/music/RotateSound.wav",
     "./manifest.json",
 
 ];
@@ -59,7 +53,8 @@ self.addEventListener("fetch", evt => {
         caches.match(evt.request).then(cacheRes => {
             return cacheRes || fetch(evt.request).then(fetchRes => {
                 return caches.open(Dynamic).then(cache => {
-                    if (evt.request.url.indexOf(".js") == -1) {
+                    console.log(evt.request.statusCode)
+                    if (evt.request.url.indexOf(".js") == -1 && evt.request.url.indexOf(".wav") == -1 && evt.request.url.indexOf(".ogg") == -1) {
                         cache.put(evt.request.url, fetchRes.clone());
                         limitCacheSize(Dynamic, 10)
 
