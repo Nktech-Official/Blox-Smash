@@ -53,7 +53,6 @@ self.addEventListener("fetch", evt => {
         caches.match(evt.request).then(cacheRes => {
             return cacheRes || fetch(evt.request).then(fetchRes => {
                 return caches.open(Dynamic).then(cache => {
-                    console.log(evt.request.statusCode)
                     if (evt.request.url.indexOf(".js") == -1 && evt.request.url.indexOf(".wav") == -1 && evt.request.url.indexOf(".ogg") == -1) {
                         cache.put(evt.request.url, fetchRes.clone());
                         limitCacheSize(Dynamic, 10)
