@@ -9,7 +9,7 @@ This is my first Game developed with HTML5 canvas. you can say this is just a te
 
 # Features
 
-1. Responsive design specially for Mobile devise 
+1. Responsive design specially for Mobile devices
 2. Can be played on a slow internet connection 
 3. Based on the mobile-first design. 
 4. Touch screen support.
