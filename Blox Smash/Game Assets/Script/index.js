@@ -382,6 +382,7 @@ function Piece(Tetromino, color) {
             if (this.y === -1) {
                 // ctx.shadowOffsetY -= 1 * SQ
                 x = nextPiece();
+                Score++;
             }
 
         }
@@ -745,10 +746,15 @@ function CONTROL(event) {
                 if (!GamePaused) {
 
                     event.preventDefault();
-                    Score++;
 
                     p.moveDown();
                 }
+            }
+        } else if (event.keyCode == 32) {
+            if (!gameOver) {
+                event.preventDefault();
+                p.y += p.shadow();
+                p.moveDown();
             }
         } else if (event.keyCode == 80) {
             if (!gameOver) {
@@ -788,8 +794,6 @@ document.getElementById("gameCanvas").addEventListener("touchstart", function(e)
             } else if (Math.abs(XDiff) < Math.abs(YDiff)) {
                 if (TouchY < e.touches[0].clientY) {
                     //Down Swipe;
-
-                    Score++;
 
                     p.moveDown();
                 }
