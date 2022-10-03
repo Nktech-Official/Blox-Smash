@@ -194,19 +194,48 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
 #menu button {
-    background-color: rgba(255, 255, 255, 0);
-    color: black;
-    border: 2px outset #36f47f;
-    border-radius: 70px;
+  display: inline-block;
+  border-radius: 60px;
+  color: black;
+  padding: .75rem 1.25rem;
+  border-color: #36f47f;
+  letter-spacing: .10rem;
+  min-width:max-content;
+  transition: all 300ms;
+  position: relative;
+  background-color:transparent;
+  overflow: hidden;
+  z-index: 1;
 }
-
-#menu button:hover {
-    background-color: #36f47f;
-    color: white;
+#menu button:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10rem;
+    z-index: -3;
+  }
+  #menu button:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color:#36f47f;
+    transition: all 300ms;
+    border-radius: 9rem;
+    z-index: -2;
+  }
+#menu button:hover{
+  color: white;
 }
-
+#menu button:hover:before{
+  width:100%;
+}
 #menu button:active {
     transform: translateX(4px);
     transform: translateY(-4px);
