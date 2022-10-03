@@ -59,7 +59,12 @@ body {
     border: 2px solid var(--borderColor);
     flex-direction: column;
 }
-
+#SLN div{
+    border-bottom: 2px solid var(--borderColor);
+}
+#SLN div div{
+    border: none;
+}
 #SCORE,
 #Level {
     height: fit-content;
