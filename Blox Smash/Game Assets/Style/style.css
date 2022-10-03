@@ -99,17 +99,15 @@ body {
 #play-pause {
     display: none;
 }
-
-label {
-    cursor: pointer;
-}
-
 #play-pause:checked+#play-pause-label::after {
     content: "►";
 }
 
 #play-pause-label::after {
     content: "❙❙";
+}
+#play-pause-label , button , #Sound, #MusicNote{
+    cursor: pointer;
 }
 
 #pauseResume {
