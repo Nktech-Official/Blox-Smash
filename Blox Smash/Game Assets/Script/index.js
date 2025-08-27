@@ -189,7 +189,6 @@ document.addEventListener("DOMContentLoaded", function() {
     ];
 
     function drawSquare(x, y, color, stroke, T) {
-        console.log("Drawing square at:", x, y, "Color:", color, "SQ:", SQ);
         ctx.globalAlpha = 1;
         if (stroke === "piece") {
             if (T === "shadow") {
@@ -338,7 +337,6 @@ document.addEventListener("DOMContentLoaded", function() {
         this.y = -2;
         // Piece.prototype.draw
         this.draw = function() {
-            console.log("Piece.draw called");
             let sha = this.shadow();
             for (let r = 0; r < this.activeTetromino.length; r++) {
                 for (let c = 0; c < this.activeTetromino.length; c++) {
@@ -510,7 +508,6 @@ document.addEventListener("DOMContentLoaded", function() {
             Score += DeltaScore
             ClearLine += LineClear;
 
-            //console.log("Socre", Score, "Line: ", LineClear, "TClear: ", ClearLine)
             update();
         }
         this.shadow = function() {
@@ -556,7 +553,6 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem("SoundOn", SoundOn);
     } else {
         SoundOn = (localStorage.getItem("SoundOn"));
-        // console.log(SoundOn)
         if (SoundOn == "true") {
             SoundOn = true;
             document.getElementById("Sound").src = "../../Game Assets/img/Sound.png"
@@ -625,7 +621,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function drop() {
-        console.log("drop function called");
         let now = Date.now();
         let delta = now - dropStart;
         if (delta > speed) {
@@ -645,7 +640,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     GameOverSound.play();
                 }
 
-                // console.log('Two seconds later, showing sleep in a loop...');
                 document.getElementById("menu").style.display = "flex";
                 document.getElementById("Dscore").innerHTML = Score;
                 if (Number(localStorage.getItem("Score")) < Score) {
@@ -788,7 +782,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("gameCanvas").addEventListener("touchstart", function(e) {
         TouchX = e.touches[0].clientX
         TouchY = e.touches[0].clientY
-        // console.log("Tx: ", TouchX, "Ty: ", TouchY)
         document.getElementById("gameCanvas").addEventListener('touchmove', function(e) {
             XDiff = TouchX - MoveX;
             YDiff = TouchY - MoveY;
@@ -904,7 +897,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
 
                 // await sleep(10000);
-                // console.log('Two seconds later, showing sleep in a loop...');
                 document.getElementById("iconL").innerHTML = "Resume";
                 document.getElementById("menu").style.display = "flex";
                 document.getElementById("start").style.display = "none";

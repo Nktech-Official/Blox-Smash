@@ -5,7 +5,7 @@
 }
 
 :root {
-    --borderColor: rgb(30, 107, 233);
+    --borderColor:#fff; 
 }
 
 body {
@@ -29,6 +29,7 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background: linear-gradient(90deg, rgba(68, 68, 237, 0.733) 23%, rgba(167, 9, 167, 0.7) 80%);
 }
 
 #GameArea {
@@ -100,6 +101,8 @@ body {
 
 #play-pause-label::after {
     content: "❙❙";
+    letter-spacing: -14px;
+    margin-left: -14px;
 }
 
 #play-pause-label,
